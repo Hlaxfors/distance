@@ -1,5 +1,35 @@
 input();
 
+
+
+
+// Create a request variable and assign a new XMLHttpRequest object to it.
+var request = new XMLHttpRequest();
+
+// Open a new connection, using the GET request on the URL endpoint
+request.open('GET', 'https://api.opencagedata.com/geocode/v1/json?q=' + city1 + '&key=df5553c20cd8431fa69cb5bd77ba054e', true);
+
+request.onload = function () {
+  // Begin accessing JSON data here
+  }
+}
+
+// Send request
+request.send();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // (latitude/Y axis, longitude/X axis)
 var pointA = [-33.865143, 151.209900];
 var pointB = [-37.815018, 144.946014];
