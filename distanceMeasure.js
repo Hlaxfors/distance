@@ -3,19 +3,18 @@ input();
 
 
 
-// Create a request variable and assign a new XMLHttpRequest object to it.
-var request = new XMLHttpRequest();
+// // Create a request variable and assign a new XMLHttpRequest object to it.
+// var request = new XMLHttpRequest();
 
-// Open a new connection, using the GET request on the URL endpoint
-request.open('GET', 'https://api.opencagedata.com/geocode/v1/json?q=' + city1 + '&key=df5553c20cd8431fa69cb5bd77ba054e', true);
+// // Open a new connection, using the GET request on the URL endpoint
+// request.open('GET', 'https://api.opencagedata.com/geocode/v1/json?q=' + city1 + '&key=df5553c20cd8431fa69cb5bd77ba054e', true);
 
-request.onload = function () {
-  // Begin accessing JSON data here
-  }
-}
+// request.onload = function () {
+//   // Begin accessing JSON data here
+// }
 
-// Send request
-request.send();
+// // Send request
+// request.send();
 
 
 
@@ -31,8 +30,8 @@ request.send();
 
 
 // (latitude/Y axis, longitude/X axis)
-var pointA = [-33.865143, 151.209900];
-var pointB = [-37.815018, 144.946014];
+var pointA = [0];
+var pointB = [0];
 
 console.log(calcDist(pointA, pointB));
 
@@ -75,10 +74,13 @@ function input() {
             stdout.write('Your first point is ' + keys);
             lock = 1;
             stdout.write('Enter your second point: ');
+            city1 = keys;
         } else {
             stdout.write('Your second point is ' + keys);
             stdin.pause();
+            city2 = keys;
         }
+        city
     }
 
 
