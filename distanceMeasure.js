@@ -1,4 +1,5 @@
 var city1, city2;
+const chalk = require('chalk');
 var lock = 0;
 var stdin  = process.stdin;
 var stdout = process.stdout;
@@ -57,7 +58,6 @@ function respondToInput(keys) {
                         var pointA = [city1Info.geometry.lat, city1Info.geometry.lng];
                         var pointB = [city2Info.geometry.lat, city2Info.geometry.lng];
                         
-                        console.log('\x1b[36m%s\x1b[0m', 'The distance from ' + city1Info.formatted + ' to ' + city2Info.formatted + ' is ' + calcDist(pointA, pointB) + 'km');
                         
                         /**
                          * take 2 lat/long points and calculate the distence in meters
@@ -87,6 +87,7 @@ function respondToInput(keys) {
 
                 });
 
+                console.log('\nThe distance from ' + chalk.blue(city1Info.formatted) + ' to ' + chalk.blue(city2Info.formatted) + ' is ' + chalk.magenta(calcDist(pointA, pointB) + 'km') + '\n');
             });
 
         }
